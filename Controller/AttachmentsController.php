@@ -476,7 +476,7 @@ class AttachmentsController extends AppController
             $file_size = $this->get_file_size($file_path, $append_file);
             if ($file_size === $file->size) {
                 if ($file_id = $this->Attachment->createFile($file)) {
-                    $fild->id = $file_id;
+                    $file->id = $file_id;
                     if ($this->options['orient_image']) {
                         $this->orient_image($file_path);
                     }
